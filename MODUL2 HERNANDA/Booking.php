@@ -11,7 +11,7 @@
 
 	<?php 
 
-		$gedung = $_POST['gedung'];
+		$gedung != $_POST['gedung'];
 
 	 ?>
 </style>
@@ -120,7 +120,7 @@
 									<label class="form-check-label">Sound System/$250</label>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary form-control">Book</button>
+							<button type="reset" class="btn btn-primary form-control">Book</button>
 						</form>
 					</div>
 				</div>

@@ -37,7 +37,7 @@
 		$harga = 500;		
 	}
 
-	$total_harga = $harga;
+	$totalharga = $harga;
 	// foreach ($layanan as $key) {
 	// 	if ($key == 'Catering') {
 	// 		$total_harga = $total_harga+700;
