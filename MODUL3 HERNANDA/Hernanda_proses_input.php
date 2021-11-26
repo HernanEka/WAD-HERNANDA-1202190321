@@ -29,7 +29,7 @@ if(!in_array($ext,$ekstensi) ) {
 	if($ukuran < 1044070){		
 		$xx = $rand.'_'.$filename;
 		move_uploaded_file($_FILES['img']['tmp_name'], 'src/img/uploads/'.$rand.'_'.$filename);
-		$insert = "INSERT INTO buku_table(judul_buku, penulis_buku, tahun_terbit, deskripsi, gambar, tag, bahasa) VALUES('$judul', '$penulis', '$tahun', '$deskripsi', '$xx', '$tag', '$bahasa')";
+		$insert = "UPDATE INTO buku_table(judul_buku, penulis_buku, tahun_terbit, deskripsi, gambar, tag, bahasa) VALUES('$judul', '$penulis', '$tahun', '$deskripsi', '$xx', '$tag', '$bahasa')";
 
 		$hasil = mysqli_query($koneksi, $insert);
 		
