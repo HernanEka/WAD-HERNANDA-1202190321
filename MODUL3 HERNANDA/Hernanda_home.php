@@ -38,7 +38,7 @@ if ($cek_isi == 0) {
 					<div class="card-body">
 						<h3 class="card-text"><?=$isi['judul_buku']?></h3>
 						<p class="card-text"><?=$isi['deskripsi']?></p>
-						<a href="Hernanda_detail.php?Id=<?=$isi['id_buku']?>" class="btn btn-primary">Tampilkan Lebih Lanjut</a>
+						<a href="Hernanda_detail.php?id=<?=$isi['id_buku']?>" class="btn btn-primary">Tampilkan Lebih Lanjut</a>
 					</div>
 				</div>
 			</div>

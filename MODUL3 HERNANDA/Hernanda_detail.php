@@ -12,7 +12,7 @@ $query = mysqli_query($koneksi,$select);
 
 $isi = mysqli_fetch_assoc($query);
 
-$tag = explode(', ', $isi['tag'])
+$tag = explode(', ', $isi['tag']);
 
 ?>
 <section id="detail">
@@ -141,7 +141,7 @@ $tag = explode(', ', $isi['tag'])
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-									<button type="submit" name="sbmit" class="btn btn-primary">Simpan Perubahan</button>
+									<button type="submit" name="submit" class="btn btn-primary">Simpan Perubahan</button>
 								</div>
 							</div>
 						</div>
