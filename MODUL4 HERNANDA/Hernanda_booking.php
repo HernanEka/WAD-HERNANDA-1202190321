@@ -35,13 +35,13 @@ $select = mysqli_query($koneksi,$query);
 					$i = 1;
 					$total = 0;
 
-					if ($data = mysqli_fetch_assoc($select)) {?>
+					while ($data = mysqli_fetch_assoc($select)) {?>
 						<tr>
-							<th scope="row">$i</th>
+							<th scope="row"><?=$i?></th>
 							<td><?=$data['nama_tempat']?></td>
 							<td><?=$data['lokasi']?></td>
 							<td><?=$data['tanggal']?></td>
-							<td><?=$data['harga']?></td>
+							<td><?="Rp ".number_format($data['harga'],2,",","."); ?></td>
 							<td><a href="Hernanda_config.php?delete=yes" class="btn btn-danger">Hapus</a></td>
 						</tr>
 					<?php 
@@ -55,7 +55,8 @@ $select = mysqli_query($koneksi,$query);
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
-						<td><?=$total?></td>
+						<td><?="Rp ".number_format($total,2,",","."); ?></td>
+						<td>&nbsp;</td>
 					</tr>
 				</tbody>
 			</table>
