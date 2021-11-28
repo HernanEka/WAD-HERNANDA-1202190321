@@ -169,5 +169,16 @@ if (isset($_GET['logout'])) {
 	exit();
 }
 
+if (isset($_GET['delete'])) {
+	
+	$id = $_GET['delete'];
+
+	$delete = "DELETE FROM booking WHERE id = '$id'";
+	mysqli_query($koneksi,$delete);
+
+	$_SESSION['message'] = "Berhasil Delete";
+	header('Location:Hernanda_booking.php');
+}
+
 
 ?>

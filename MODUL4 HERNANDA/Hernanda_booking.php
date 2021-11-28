@@ -15,6 +15,13 @@ $select = mysqli_query($koneksi,$query);
 
 ?>
 
+<?php if (isset($_SESSION['berhasil'])) {?>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<?=$_SESSION['berhasil'];?>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>	
+<?php } unset($_SESSION['berhasil']);?>
+
 <section id="booking">
 	<div class="container" style="height: 70vh;">
 		<div class="shadow-lg p-3 my-5 mx-auto bg-body rounded">
@@ -42,7 +49,7 @@ $select = mysqli_query($koneksi,$query);
 							<td><?=$data['lokasi']?></td>
 							<td><?=$data['tanggal']?></td>
 							<td><?="Rp ".number_format($data['harga'],2,",","."); ?></td>
-							<td><a href="Hernanda_config.php?delete=yes" class="btn btn-danger">Hapus</a></td>
+							<td><a href="Hernanda_config.php?delete=<?=$data['id'];?>" class="btn btn-danger">Hapus</a></td>
 						</tr>
 					<?php 
 
