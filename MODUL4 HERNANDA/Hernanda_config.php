@@ -18,7 +18,7 @@ if (!$koneksi) {
 function pendaftaran($data)
 {
 	
-	global $koneksi;
+	 $koneksi;
 
 	$email = $data['email'];
 	$nama = $data['nama'];
@@ -74,7 +74,7 @@ function login($data)
 		
 		$hasil = mysqli_fetch_assoc($select);
 
-		if (password_verify($password,$hasil['password'])) {
+		if (password_verify($password,$hasil['pasword'])) {
 			
 			$_SESSION['id'] = $hasil['id'];
 			$_SESSION['email'] = $hasil['email'];
@@ -162,7 +162,7 @@ function update($data)
 
 
 if (isset($_GET['logout'])) {
-	session_destroy();
+
 
 	$_SESSION['berhasil'] = 'Berhasil Log Out';
 	header('Location:Hernanda_login.php');
