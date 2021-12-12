@@ -3,6 +3,15 @@
 
 @section('Container')
 
+@if (($vaksin->count())===0)
+
+<div class="text-center mt-3">
+	<p class="text-muted">Belum ada vaksin</p>
+	<div class="mt-2">
+		<a href="vaksin/create" class="btn btn-primary">Tambah Data Vaksin</a>
+	</div>
+</div>
+@else
 <div class="text-center mt-3">
 	<h3>Pilih Vaksin</h3>
 </div>
@@ -28,5 +37,5 @@
 
 	@endforeach
 </div>
-
+@endif
 @endsection
