@@ -47,7 +47,7 @@ class PasienController extends Controller
         $pasien->alamat = $request->alamat;
         $pasien->image_ktp = $request->file('ktp')->store('foto-ktp');
         $pasien->no_hp = $request->no_hp;
-        $pasien->save();
+        
 
         return redirect('/pasien');
     }

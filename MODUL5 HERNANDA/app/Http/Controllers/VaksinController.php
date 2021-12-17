@@ -103,7 +103,7 @@ class VaksinController extends Controller
      */
     public function destroy($id)
     {
-        $vaksin = Vaksin::find($id);
+        $vaksin = Vaksin::find($Id);
 
         Storage::delete($vaksin->image);
 

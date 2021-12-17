@@ -15,7 +15,7 @@ use App\Http\Controllers\PasienController;
 |
 */
 
-Route::get('/', function () {
+Route::get('./', function () {
     return view('Hernanda_index');
 });
 
